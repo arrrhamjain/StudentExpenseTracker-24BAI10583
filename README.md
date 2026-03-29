@@ -1,72 +1,95 @@
-# Student Expense Tracker
+# 💰 Student Expense Tracker
 
-A command-line based expense tracking application built in Java, designed to help students manage their daily income and expenses effectively.
+<div align="center">
 
-## About the Project
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![CLI](https://img.shields.io/badge/CLI-Application-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
-As a college student, managing personal finances can be challenging. This application provides a simple and effective way to track income and expenses, view transaction history, and monitor your current balance — all from the terminal.
+**A command-line Java application to help students take control of their finances.**
 
-## Features
+</div>
 
-- Add income transactions
-- Add expense transactions
-- View all transactions
-- View financial summary (total income, total expense, balance)
-- Data is saved automatically to a file and loaded on next run
+---
 
-## Concepts Used
+## 📌 About the Project
 
-- **Inheritance** — `Income` and `Expense` classes extend the abstract `Transaction` base class
-- **Polymorphism** — `getType()` and `toFileString()` methods are overridden in each subclass
-- **File I/O** — transactions are saved and loaded from `data/transactions.txt`
-- **Collections** — `ArrayList` is used to store and manage transactions
-- **Exception Handling** — invalid inputs are caught and handled gracefully
+As a college student, tracking daily expenses is often overlooked — until the month ends and the money doesn't. **Student Expense Tracker** is a lightweight CLI application built in Java that lets you log income and expenses, view your transaction history, and monitor your balance in real time.
 
-## Project Structure
+> Built as a capstone project for **Programming in Java (CSE 2006)** at **VIT Bhopal University**.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|--------|-------------|
+| ➕ Add Income | Log any money you receive |
+| ➖ Add Expense | Record your daily spending |
+| 📋 View Transactions | See your complete transaction history |
+| 📊 View Summary | Get total income, expenses and balance |
+| 💾 Auto Save | Data is saved to a file automatically |
+| 🔁 Auto Load | Previous data loads every time you run |
+
+---
+
+## 🧠 Java Concepts Applied
+
+- **Inheritance** — `Income` and `Expense` extend the abstract `Transaction` class
+- **Polymorphism** — `getType()` and `toFileString()` are overridden in each subclass
+- **Abstract Classes** — `Transaction` defines the blueprint for all transaction types
+- **File I/O** — `BufferedReader` and `BufferedWriter` handle persistent storage
+- **Collections** — `ArrayList<Transaction>` manages all transaction records
+- **Exception Handling** — Invalid inputs are caught and handled gracefully
+
+---
+
+## 📁 Project Structure
 ```
 StudentExpenseTracker/
+│
 ├── src/
-│   ├── Transaction.java
-│   ├── Income.java
-│   ├── Expense.java
-│   ├── TransactionManager.java
-│   └── Main.java
+│   ├── Transaction.java         # Abstract base class
+│   ├── Income.java              # Subclass for income entries
+│   ├── Expense.java             # Subclass for expense entries
+│   ├── TransactionManager.java  # Handles list, file save/load
+│   └── Main.java                # Entry point and CLI menu
+│
 ├── data/
-│   └── transactions.txt
+│   └── transactions.txt         # Auto-generated data file
+│
+├── .gitignore
 └── README.md
 ```
 
-## How to Run
+---
 
-### Prerequisites
-- Java JDK 8 or above installed
+## 🚀 How to Run
+
+### ✅ Prerequisites
+- Java JDK 8 or above
 - Any terminal or command prompt
 
-### Steps
-
-1. Clone the repository
-```
+### 📥 Clone the Repository
+```bash
 git clone https://github.com/arrrhamjain/StudentExpenseTracker-24BAI10583.git
+cd StudentExpenseTracker-24BAI10583
 ```
 
-2. Navigate to the src folder
-```
-cd StudentExpenseTracker-24BAI10583/src
-```
-
-3. Compile the code
-```
+### ⚙️ Compile
+```bash
+cd src
 javac Transaction.java Income.java Expense.java TransactionManager.java Main.java
 ```
 
-4. Run the program
-```
+### ▶️ Run
+```bash
 java Main
 ```
 
-## How to Use
+---
 
-Once the program starts you will see a menu:
+## 🖥️ Application Preview
 ```
 ========================================
    Student Expense Tracker
@@ -77,17 +100,39 @@ Once the program starts you will see a menu:
 3. View All Transactions
 4. View Summary
 5. Exit
+
+Choose an option: 1
+Description: Pocket Money
+Amount (Rs.): 2000
+Date (DD-MM-YYYY): 30-03-2026
+Income added successfully!
 ```
 
-- Choose **1** to add an income entry (e.g. pocket money, part-time work)
-- Choose **2** to add an expense entry (e.g. food, transport, books)
-- Choose **3** to see all your transactions
-- Choose **4** to see your total income, total expenses and current balance
-- Choose **5** to exit the program
+---
 
-## Author
+## 📊 Sample Summary Output
+```
+--- Summary ---
+Total Income  : Rs. 2000.00
+Total Expense : Rs. 450.00
+Balance       : Rs. 1550.00
+```
 
-- **Name:** Arham Jain
-- **Registration Number:** 24BAI10583
-- **Course:** Programming in Java (CSE 2006)
-- **University:** VIT Bhopal University
+---
+
+## 👨‍💻 Author
+
+| Field | Details |
+|-------|---------|
+| **Name** | Arham Jain |
+| **Reg. No.** | 24BAI10583 |
+| **Course** | Programming in Java — CSE 2006 |
+| **University** | VIT Bhopal University |
+
+---
+
+<div align="center">
+
+*Made with ☕ Java and a lot of budgeting stress*
+
+</div>
